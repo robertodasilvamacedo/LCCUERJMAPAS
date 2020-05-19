@@ -122,4 +122,3 @@ C:\Users\roberto.macedo\source\repos\LCCUERJMapasSolution\LCCUERJMapas\bin\Debug
 C:\Users\roberto.macedo\source\repos\LCCUERJMapasSolution\LCCUERJMapas\bin\Debug\netcoreapp3.1\runtimes\win\lib\netstandard2.0\System.Security.Cryptography.ProtectedData.dll
 C:\Users\roberto.macedo\source\repos\LCCUERJMapasSolution\LCCUERJMapas\obj\Debug\netcoreapp3.1\LCCUERJMapas.csproj.CoreCompileInputs.cache
 C:\Users\roberto.macedo\source\repos\LCCUERJMapasSolution\LCCUERJMapas\obj\Debug\netcoreapp3.1\LCCUERJMapas.MvcApplicationPartsAssemblyInfo.cache
-C:\Users\roberto.macedo\source\repos\LCCUERJMapasSolution\LCCUERJMapas\obj\Debug\netcoreapp3.1\LCCUERJMapas.csprojAssemblyReference.cache

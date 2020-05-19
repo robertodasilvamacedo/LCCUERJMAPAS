@@ -32,6 +32,14 @@ namespace LCCUERJMapas.Models
         [JsonProperty("display_name")]
         public string DisplayName { get; set; }
 
+        public string Rua { get; set; }
+        public string Bairro { get; set; }
+        public string DescricaoLocalidade { get; set; }
+        public string Cidade { get; set; }
+        public string Estado { get; set; }
+        public string RegiaoPais { get; set; }
+        public string Pais { get; set; }
+
         [JsonProperty("class")]
         public string Classe { get; set; }
 

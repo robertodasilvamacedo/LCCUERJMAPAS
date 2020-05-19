@@ -31,13 +31,24 @@ namespace LCCUERJMapas.Models
                 {
                     string[] temp = street.Split(" ");
 
+                    for (int i = 0; i < temp.Length; i++)
+                    {
+                        int indice = temp[i].IndexOf('/');
+                        //Retirando o que tiver depois do /
+                        if(indice != -1)
+                        {
+                            temp[i] = temp[i].Substring(0, indice);
+                            endTemp += temp[i] + " ";
+                        }
+                        else
+                        {
+                            endTemp += temp[i] + " ";
+                        }
+                    }
+
                     if(temp.Length >= 6)
                     {
                         endTemp = temp[0] + " " + temp[1] + " " + temp[2] + " " + temp[3] + " " + temp[4] + " " + temp[5];
-                    }
-                    else
-                    {
-                        endTemp = street;
                     }
                     builderParametros.Append($"street={endTemp}&");
                 }
@@ -78,6 +89,16 @@ namespace LCCUERJMapas.Models
                 {
                     lstResultadoConsultaNominatim[i].Cep = postalcode;
                     lstResultadoConsultaNominatim[i].UrlMapa = "http://maps.lcc.ime.uerj.br/search?street="+endTemp+"&county="+county+"&country="+country;
+
+                    string[] displayNameArrayTemp = lstResultadoConsultaNominatim[i].DisplayName.Split(",");
+
+                    lstResultadoConsultaNominatim[i].Rua = displayNameArrayTemp[0];
+                    lstResultadoConsultaNominatim[i].Bairro = displayNameArrayTemp[1];
+                    lstResultadoConsultaNominatim[i].DescricaoLocalidade = displayNameArrayTemp[2];
+                    lstResultadoConsultaNominatim[i].Cidade = displayNameArrayTemp[3];
+                    lstResultadoConsultaNominatim[i].Estado = displayNameArrayTemp[7];
+                    lstResultadoConsultaNominatim[i].RegiaoPais = displayNameArrayTemp[8];
+                    lstResultadoConsultaNominatim[i].Pais = "Brasil";
                 }
 
                 if(lstResultadoConsultaNominatim.Count == 0 && objCep != null)
